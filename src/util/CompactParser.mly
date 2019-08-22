@@ -7,9 +7,8 @@
 %%
 
 program :
-| items = list(item) {String.concat items}
+| items = list(item); EOF {String.concat items}
 
 item :
 | WHITESPACE {" "}
 | item = PHRASE {item}
-| EOF {""}
