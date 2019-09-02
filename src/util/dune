@@ -1,3 +1,9 @@
+(ocamllex
+  (modules CompactLexer))
+
+(menhir
+  (modules CompactParser))
+
 (library
  (name scilla_util)
  (wrapped false)

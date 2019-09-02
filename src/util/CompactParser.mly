@@ -2,12 +2,12 @@
 %token WHITESPACE
 %token EOF
 
-%start <String> program
+%start <string> program
 
 %%
 
 program :
-| items = list(item); EOF {String.concat items}
+| items = list(item); EOF {String.concat "" items}
 
 item :
 | WHITESPACE {" "}
